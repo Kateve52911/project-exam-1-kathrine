@@ -1,0 +1,35 @@
+@import url(./components/variables.css);
+@import url(./components/header-and-footer.css);
+@import url(./components/images.css);
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f2bb9b;
+}
+
+header {
+  flex: 0; /* Header remains its natural height */
+}
+
+main {
+  flex: 1; /* Main takes up remaining space */
+}
+
+footer {
+  flex: 0; /* Footer remains its natural height */
+}
+/* body {
+  background-color: #f2bb9b;
+  margin: 0%;
+} */
+
+/* Homepage */
+
+.website-title-box {
+  text-align: center;
+}

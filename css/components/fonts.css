@@ -1,0 +1,19 @@
+@import url(variables.css);
+
+a,
+.h1-homepage {
+  font-family: var(--main-header-font);
+  font-size: large;
+}
+
+.description-line-homepage,
+.description-line-footer {
+  font-family: var(--main-text-font);
+  font-style: italic;
+  font-weight: lighter;
+}
+
+.h1-homepage {
+  font-size: 56px;
+  color: var(--main-colour-dark-r);
+}

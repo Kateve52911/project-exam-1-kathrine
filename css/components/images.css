@@ -1,0 +1,36 @@
+.logo-Image {
+  max-height: 50px;
+  margin-left: -150px;
+}
+
+.logo-footer-image {
+  max-width: 350px;
+}
+
+.image-front-page-header {
+  width: 1470px;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.acropolis-image {
+  position: absolute;
+  top: -150px;
+  left: -250px;
+}
+
+/* Media Queries */
+/* Phone */
+@media (max-width: 799px) {
+  .image-front-page-header {
+    width: 428px;
+    height: 300px;
+  }
+
+  .acropolis-image {
+    position: absolute;
+    top: -150px;
+    left: -750px;
+  }
+}

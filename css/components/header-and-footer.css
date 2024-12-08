@@ -1,0 +1,73 @@
+@import url(variables.css);
+@import url(fonts.css);
+
+.header-container {
+  background-color: var(--main-colour-gb);
+  border: solid var(--main-colour-dark-b);
+  border-width: 20px 0; /* Top and bottom: 20px, left and right: 0 */
+  padding: 2%;
+}
+
+.footer-container {
+  background-color: var(--main-colour-p);
+  border: solid var(--main-colour-dark-r);
+  border-width: 20px 0; /* Top and bottom: 20px, left and right: 0 */
+  padding: 2%;
+}
+
+.flex-footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  column-gap: 30px;
+}
+
+nav {
+  display: inline;
+}
+
+a.nav-header,
+a.nav-footer {
+  color: var(--main-colour-dark-b);
+  text-decoration: none;
+  padding: 5px 20px;
+}
+
+a.nav-footer {
+  color: white;
+}
+
+.flex-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.description-line-footer {
+  color: white;
+  margin-left: 500px;
+  margin-right: 500px;
+}
+
+.nav-links-footer {
+  margin-top: 30px;
+}
+
+a.indicator-header {
+  /* background-color: var(--main-colour-dark-b); */
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px var(--main-colour-dark-b);
+}
+
+a.indicator-footer {
+  /* text-decoration: underline; */
+  box-shadow: 5px 5px 10px var(--main-colour-dark-r);
+}
+
+/* Media Queries */
+/* Phone */
+@media (min-width: 800px) {
+}
+@media (max-width: 799px) {
+}
