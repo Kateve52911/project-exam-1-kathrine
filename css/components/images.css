@@ -20,6 +20,13 @@
   left: -250px;
 }
 
+.img-contact-page {
+  border-radius: 40%;
+  height: 600px;
+  width: 300px;
+  padding: 100px 100px;
+}
+
 /* Media Queries */
 /* Phone */
 @media (max-width: 799px) {

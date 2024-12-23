@@ -1,0 +1,29 @@
+@import url(./variables.css);
+@import url(./fonts.css);
+@import url(./buttons.css);
+
+#contactForm {
+  padding: 100px 100px;
+}
+
+label {
+  font-family: var(--main-text-font);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+input {
+  background-color: var(--form-background);
+  color: var(--main-colour-dark-r);
+  display: block;
+  width: 300px;
+  height: 30px;
+  border: var(--main-colour-dark-r);
+}
+
+textarea {
+  width: 300px;
+  height: 200px;
+  background-color: var(--form-background);
+  border: var(--main-colour-dark-r);
+}

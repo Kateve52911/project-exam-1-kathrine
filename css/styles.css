@@ -1,6 +1,7 @@
 @import url(./components/variables.css);
 @import url(./components/header-and-footer.css);
 @import url(./components/images.css);
+@import url(./components/form.css);
 
 html,
 body {
@@ -32,4 +33,12 @@ footer {
 
 .website-title-box {
   text-align: center;
+}
+
+/* Contact Page */
+
+.flex-contact {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
