@@ -1,5 +1,6 @@
 @import url(variables.css);
 @import url(fonts.css);
+@import url(buttons.css);
 
 .header-container {
   background-color: var(--main-colour-gb);
@@ -23,6 +24,10 @@
 }
 
 nav {
+  display: inline;
+}
+
+li {
   display: inline;
 }
 
@@ -65,9 +70,51 @@ a.indicator-footer {
   box-shadow: 5px 5px 10px var(--main-colour-dark-r);
 }
 
+/* HAMBURGER MENU */
+/* General Reset */
+.hidden {
+  display: none;
+}
+
+/* Hamburger Icon (Desktop) */
+.hamburger {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+}
+
+.menuIcon,
+.closeIcon {
+  cursor: pointer;
+}
+
+/* Navigation Menu (Desktop Default) */
+.menu {
+  display: flex; /* Horizontal menu by default */
+  list-style: none;
+  gap: 20px;
+}
+
+.menu.open {
+  display: flex; /* Shown when toggled open */
+  flex-direction: column; /* Vertical layout for mobile */
+}
+
 /* Media Queries */
 /* Phone */
-@media (min-width: 800px) {
+
+/* Media Query for Mobile View */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Show hamburger on mobile */
+  }
+
+  .menu {
+    display: none; /* Hide menu by default */
+  }
+
+  .menu.open {
+    display: flex; /* Show menu when toggled open */
+  }
 }
 @media (max-width: 799px) {
 }

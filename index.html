@@ -7,6 +7,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <script
+      src="https://kit.fontawesome.com/f6ecbff17b.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="/css/styles.css" />
     <title>godly whispers | home</title>
   </head>
@@ -15,11 +19,22 @@
     <header>
       <div class="flex-header header-container">
         <div>
-          <nav>
-            <a href="index.html" class="nav-header indicator-header"> Home </a>
-          </nav>
-          <nav><a href="about.html" class="nav-header"> About </a></nav>
-          <nav><a href="blog.html" class="nav-header"> Blog </a></nav>
+          <!-- Hamburger button with icons -->
+          <button class="hamburger">
+            <i class="fa-solid fa-bars fa-2xl menuIcon"></i>
+            <i class="fa-solid fa-x fa-2xl closeIcon"></i>
+          </button>
+
+          <!-- Navigation menu -->
+          <ul class="menu hidden">
+            <li>
+              <a href="index.html" class="nav-header menuItem indicator-header"
+                >Home</a
+              >
+            </li>
+            <li><a href="about.html" class="nav-header menuItem">About</a></li>
+            <li><a href="blog.html" class="nav-header menuItem">Blog</a></li>
+          </ul>
         </div>
         <div>
           <a href="index.html">
@@ -86,5 +101,6 @@
       </div>
     </footer>
     <script type="module" src="js/api/apiCall.js"></script>
+    <script type="module" src="js/helpers/hamburgerMenu.js"></script>
   </body>
 </html>
