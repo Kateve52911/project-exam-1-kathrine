@@ -32,4 +32,8 @@ textarea {
   .flex-contact {
     flex-direction: column;
   }
+
+  #contactForm {
+    padding: 10px 100px;
+  }
 }
