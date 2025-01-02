@@ -27,3 +27,9 @@ textarea {
   background-color: var(--form-background);
   border: var(--main-colour-dark-r);
 }
+
+@media (max-width: 799px) {
+  .flex-contact {
+    flex-direction: column;
+  }
+}

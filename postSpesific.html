@@ -15,11 +15,19 @@
     <header>
       <div class="flex-header header-container">
         <div>
-          <nav>
-            <a href="index.html" class="nav-header indicator-header"> Home </a>
-          </nav>
-          <nav><a href="about.html" class="nav-header"> About </a></nav>
-          <nav><a href="blog.html" class="nav-header"> Blog </a></nav>
+          <button class="hamburger">
+            <i class="fa-solid fa-bars fa-2xl menuIcon"></i>
+            <i class="fa-solid fa-x fa-2xl closeIcon"></i>
+          </button>
+          <ul class="menu hidden">
+            <li>
+              <a href="index.html" class="nav-header menuItem indicator-header"
+                >Home</a
+              >
+            </li>
+            <li><a href="about.html" class="nav-header menuItem">About</a></li>
+            <li><a href="blog.html" class="nav-header menuItem">Blog</a></li>
+          </ul>
         </div>
         <div>
           <a href="index.html">
@@ -31,7 +39,10 @@
           </a>
         </div>
         <div>
-          <nav><a href="contact.html" class="nav-header"> Contact Us</a></nav>
+          <a href="contact.html" class="nav-header">
+            <span class="nav-text">Contact Us</span>
+            <i class="fa-solid fa-envelope fa-2xl hidden-icon-header"></i>
+          </a>
         </div>
       </div>
     </header>
