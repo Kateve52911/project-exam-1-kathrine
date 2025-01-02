@@ -7,6 +7,7 @@
   border: solid var(--main-colour-dark-b);
   border-width: 20px 0; /* Top and bottom: 20px, left and right: 0 */
   padding: 2%;
+  width: auto;
 }
 
 .footer-container {
@@ -160,6 +161,11 @@ a.indicator-footer {
 
   .nav-text {
     display: none;
+  }
+
+  .header-container,
+  .footer-container {
+    width: auto;
   }
 }
 
