@@ -11,9 +11,18 @@
 }
 
 .hamburger {
-  position: fixed;
+  position: absolute;
   background-color: var(--main-colour-gb);
   color: var(--main-colour-dark-b);
   border: none;
   cursor: pointer;
+}
+
+.closeIcon {
+  position: fixed;
+  margin-left: 350px;
+}
+
+.contact-link {
+  color: var(--main-colour-dark-b);
 }

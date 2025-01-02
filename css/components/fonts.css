@@ -17,3 +17,14 @@ a,
   font-size: 56px;
   color: var(--main-colour-dark-r);
 }
+
+.menuIcon {
+  font-size: 40px;
+}
+
+/* Media Queries */
+@media (max-width: 799px) {
+  a.nav-footer {
+    font-size: medium;
+  }
+}

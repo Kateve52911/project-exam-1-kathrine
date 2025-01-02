@@ -51,8 +51,8 @@ a.nav-footer {
 
 .description-line-footer {
   color: white;
-  margin-left: 500px;
-  margin-right: 500px;
+  margin-left: 30%;
+  margin-right: 30%;
 }
 
 .nav-links-footer {
@@ -70,9 +70,11 @@ a.indicator-footer {
   box-shadow: 5px 5px 10px var(--main-colour-dark-r);
 }
 
-/* HAMBURGER MENU */
-/* General Reset */
-.hidden {
+.nav-text {
+  display: inline;
+}
+
+.hidden-icon-header {
   display: none;
 }
 
@@ -89,9 +91,18 @@ a.indicator-footer {
 
 /* Navigation Menu (Desktop Default) */
 .menu {
-  display: flex; /* Horizontal menu by default */
-  list-style: none;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: var(--main-colour-gb);
+  z-index: 1000;
+  flex-direction: column;
   gap: 20px;
+  padding: 60px 20px;
+  list-style: none;
 }
 
 .menu.open {
@@ -99,11 +110,34 @@ a.indicator-footer {
   flex-direction: column; /* Vertical layout for mobile */
 }
 
-/* Media Queries */
-/* Phone */
+/* Prevent Other Elements From Overlapping */
+.header-container,
+.contact-us {
+  z-index: 1; /* Lower z-index to ensure they go behind the menu */
+}
 
+/* Hamburger Icon (Mobile) */
+.hamburger {
+  z-index: 1100; /* Ensure it's above the menu */
+}
+
+/* Media Queries */
+
+/* Desktop - Always Show Menu Inline */
+@media (min-width: 769px) {
+  .menu {
+    display: flex; /* Always visible in desktop */
+    position: static; /* Normal flow positioning */
+    width: auto;
+    height: auto;
+    background: none; /* Remove background */
+    flex-direction: row; /* Horizontal layout */
+    gap: 20px;
+    padding: 0; /* Remove mobile-specific padding */
+  }
+}
 /* Media Query for Mobile View */
-@media (max-width: 768px) {
+@media (max-width: 799px) {
   .hamburger {
     display: block; /* Show hamburger on mobile */
   }
@@ -115,6 +149,19 @@ a.indicator-footer {
   .menu.open {
     display: flex; /* Show menu when toggled open */
   }
+
+  .flex-footer {
+    gap: 5px;
+  }
+
+  .hidden-icon-header {
+    display: inline;
+  }
+
+  .nav-text {
+    display: none;
+  }
 }
+
 @media (max-width: 799px) {
 }

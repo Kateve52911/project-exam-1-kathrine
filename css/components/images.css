@@ -40,4 +40,9 @@
     top: -150px;
     left: -750px;
   }
+
+  .logo-Image {
+    max-width: 200px;
+    margin: 8% 20%;
+  }
 }
