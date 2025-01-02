@@ -60,4 +60,8 @@
     max-width: 300px;
     padding: 5%;
   }
+
+  .logo-footer-image {
+    max-width: 250px;
+  }
 }
