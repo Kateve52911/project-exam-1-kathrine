@@ -3,7 +3,8 @@
   margin-left: -150px;
 }
 
-.logo-footer-image {
+.logo-footer-image,
+.acropolis-image-about {
   max-width: 350px;
 }
 
@@ -27,11 +28,16 @@
   padding: 100px 100px;
 }
 
+.vase-image-about {
+  max-width: 500px;
+  padding: 5%;
+}
+
 /* Media Queries */
 /* Phone */
 @media (max-width: 799px) {
   .image-front-page-header {
-    width: 428px;
+    width: 445px;
     height: 300px;
   }
 
@@ -48,5 +54,10 @@
 
   .img-contact-page {
     padding: 12%;
+  }
+
+  .vase-image-about {
+    max-width: 300px;
+    padding: 5%;
   }
 }

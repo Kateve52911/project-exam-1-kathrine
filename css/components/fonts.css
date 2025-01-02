@@ -1,7 +1,8 @@
 @import url(./variables.css);
 
 a,
-.h1-homepage {
+.h1-homepage,
+.about-text {
   font-family: var(--main-header-font);
   font-size: large;
 }
@@ -22,9 +23,19 @@ a,
   font-size: 40px;
 }
 
+.about-text {
+  text-align: left;
+  padding-top: 30px;
+}
+
 /* Media Queries */
 @media (max-width: 799px) {
   a.nav-footer {
     font-size: medium;
+  }
+
+  .about-text {
+    font-size: medium;
+    padding-bottom: 0%;
   }
 }

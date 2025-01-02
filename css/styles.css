@@ -43,3 +43,26 @@ footer {
   justify-content: center;
   align-items: flex-start;
 }
+
+/* about */
+.container-about-page {
+  padding: 2% 20%;
+}
+
+.mini-container-about {
+  display: flex;
+  gap: 100px;
+}
+
+/* Media Queries */
+/* Mobile */
+@media (max-width: 799px) {
+  .container-about-page {
+    padding: 2% 10%;
+  }
+
+  .mini-container-about {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
