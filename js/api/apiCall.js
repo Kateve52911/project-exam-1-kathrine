@@ -1,6 +1,6 @@
 import { API_URL } from "./constants.js";
-console.log(API_URL);
 
+const blogContainer = document.querySelector(".container-blog-posts");
 export async function getBlogPostsDetails(apiURL = API_URL) {
   const response = await fetch(apiURL);
   const blogData = await response.json();

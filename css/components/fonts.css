@@ -4,28 +4,47 @@ a,
 .h1-homepage,
 .about-text {
   font-family: var(--main-header-font);
+}
+
+a,
+.h1-homepage,
+.about-text {
   font-size: large;
 }
 
 .description-line-homepage,
-.description-line-footer {
+.description-line-footer,
+.description-line-about,
+.about-text {
   font-family: var(--main-text-font);
+}
+
+.description-line-homepage,
+.description-line-footer {
   font-style: italic;
   font-weight: lighter;
 }
 
-.h1-homepage {
-  font-size: 56px;
+.h1-homepage,
+.description-line-about {
   color: var(--main-colour-dark-r);
 }
 
+.h1-homepage {
+  font-size: 56px;
+}
+
 .menuIcon {
-  font-size: 40px;
+  font-size: 32px;
 }
 
 .about-text {
   text-align: left;
   padding-top: 30px;
+}
+
+.description-line-about {
+  font-size: 46px;
 }
 
 /* Media Queries */

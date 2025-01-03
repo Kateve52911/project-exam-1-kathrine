@@ -54,6 +54,11 @@ footer {
   gap: 100px;
 }
 
+.post-container {
+  background-color: var(--main-colour-dark-r);
+  padding: 4%;
+}
+
 /* Media Queries */
 /* Mobile */
 @media (max-width: 799px) {
