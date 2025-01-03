@@ -26,3 +26,37 @@
 .contact-link {
   color: var(--main-colour-dark-b);
 }
+
+.thumb-btn.darkRed,
+.thumb-btn.darkBlue,
+.thumb-btn.blue,
+.thumb-btn.default {
+  color: white;
+  background-color: var(--main-colour-dark-r);
+  border-color: var(--main-colour-dark-r);
+  border-radius: 10px;
+  padding: 10px 40px;
+}
+
+.thumb-btn.darkBlue {
+  color: white;
+  background-color: var(--main-colour-dark-b);
+  border-color: var(--main-colour-dark-b);
+}
+
+.thumb-btn.blue {
+  color: var(--main-colour-dark-b);
+  background-color: var(--main-colour-gb);
+  border-color: var(--main-colour-gb);
+}
+
+.thumb-btn.default {
+  background-color: var(--main-colour-p);
+  border-color: var(--main-colour-p);
+}
+
+.loadMoreBtn {
+  background-color: var(--main-colour-gb);
+  color: var(--main-colour-dark-b);
+  padding: 20px 50px;
+}

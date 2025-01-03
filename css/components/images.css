@@ -33,6 +33,10 @@
   padding: 5%;
 }
 
+.thumb-img {
+  max-width: 65%;
+}
+
 /* Media Queries */
 /* Phone */
 @media (max-width: 799px) {

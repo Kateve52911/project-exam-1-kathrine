@@ -8,14 +8,25 @@ a,
 
 a,
 .h1-homepage,
-.about-text {
+.about-text,
+.loadMoreBtn,
+.thumb-btn.darkRed,
+.thumb-btn.darkBlue,
+.thumb-btn.blue,
+.thumb-btn.default {
   font-size: large;
 }
 
 .description-line-homepage,
 .description-line-footer,
 .description-line-about,
-.about-text {
+.about-text,
+.loadMoreBtn,
+.thumb-btn.darkRed,
+.thumb-btn.darkBlue,
+.thumb-btn.blue,
+.thumb-btn.default,
+.thumb-title {
   font-family: var(--main-text-font);
 }
 
@@ -45,6 +56,10 @@ a,
 
 .description-line-about {
   font-size: 46px;
+}
+
+.thumb-title {
+  color: white;
 }
 
 /* Media Queries */

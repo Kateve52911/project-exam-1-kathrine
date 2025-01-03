@@ -3,6 +3,7 @@
 @import url(./components/images.css);
 @import url(./components/form.css);
 @import url(./components/buttons.css);
+@import url(./components/thumbnail.css);
 
 html,
 body {
@@ -57,6 +58,21 @@ footer {
 .post-container {
   background-color: var(--main-colour-dark-r);
   padding: 4%;
+}
+
+/* blog */
+
+.container-blog-posts {
+  display: grid;
+  grid-template-columns: repeat(2, 25%);
+  grid-template-rows: auto;
+  margin-bottom: 10%;
+  justify-items: center;
+  justify-content: center;
+}
+
+.btnLoadMoreContainer {
+  margin: 5% 44%;
 }
 
 /* Media Queries */
