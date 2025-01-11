@@ -1,12 +1,8 @@
-import { getBlogPostsDetails } from "../api/apiCall.js";
-//import { renderBlogPosts } from "./renderBlogPosts.js";
-import { parseHTMLContent } from "./parseHTMLContent.js";
-import { API_URL } from "../api/constants.js";
+import { parseHTMLContent } from "../helpers/parseHTMLContent.js";
 
-const blogData = await getBlogPostsDetails();
 const blogContainer = document.querySelector(".container-blog-posts");
 
-function renderThumbnails(post, colour, btnColour) {
+export function renderThumbnails(post, colour, btnColour) {
   const thumbElement = document.createElement("div");
   thumbElement.classList.add("thumbnail");
   thumbElement.classList.add(colour);
@@ -35,26 +31,3 @@ function renderThumbnails(post, colour, btnColour) {
 
   blogContainer.appendChild(thumbElement);
 }
-
-getBlogPostsDetails(API_URL).then((blogData) => {
-  for (const [ind, post] of blogData.entries()) {
-    let colour;
-    let btnColour;
-
-    if (ind % 4 === 0) {
-      colour = "pink";
-      btnColour = "darkRed";
-    } else if (ind % 4 === 1) {
-      colour = "darkBlue";
-      btnColour = "blue";
-    } else if (ind % 4 === 2) {
-      colour = "blue";
-      btnColour = "darkBlue";
-    } else {
-      colour = "default";
-      btnColour = "default";
-    }
-
-    renderThumbnails(post, colour, btnColour);
-  }
-});

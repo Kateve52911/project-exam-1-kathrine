@@ -1,10 +1,16 @@
 import { API_URL } from "./constants.js";
 
-const blogContainer = document.querySelector(".container-blog-posts");
-export async function getBlogPostsDetails(apiURL = API_URL) {
-  const response = await fetch(apiURL);
-  const blogData = await response.json();
-  return blogData;
-}
+export async function getBlogPostsDetails(page = 1, perPage = 10) {
+  const paginatedURL = `${API_URL}?page=${page}&per_page=${perPage}`;
 
-console.log(getBlogPostsDetails());
+  try {
+    const response = await fetch(paginatedURL);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return await response.json();
+  } catch (error) {
+    console.error("Error fetching blog posts:", error);
+    throw error;
+  }
+}
