@@ -1,10 +1,9 @@
 import { getPostsDetails } from "../api/apiCall.js";
 import { API_URL } from "../api/constants.js";
+import { parseHTMLContent } from "./parseHTMLContent.js";
 
 async function initPostPage() {
   try {
-    console.log("Full URL:", document.location.href);
-    console.log("Search string:", document.location.search);
     const queryString = document.location.search;
     const paramPostPage = new URLSearchParams(queryString);
     const id = paramPostPage.get("id");
@@ -29,10 +28,42 @@ function renderHTMLPost(post) {
   const divPost = document.createElement("div");
   divPost.className = "post-container";
 
+  const divFlexSmall = document.createElement("div");
+  divFlexSmall.className = "flex-container-small";
+
   const postTitle = document.createElement("h1");
   postTitle.className = "h1-postPage";
   postTitle.textContent = post.title.rendered;
   divPost.appendChild(postTitle);
+
+  const paresedContent = parseHTMLContent(post.content.rendered);
+
+  const subheading = paresedContent.querySelector("h2");
+  subheading.className = "subheading-postPage";
+  divPost.appendChild(subheading);
+
+  const para = paresedContent.querySelectorAll("p");
+  for (let i = 0; i < para.length; i++) {
+    //console.log(para[i].innerHTML);
+    const firstParagraph = para[0];
+    console.log(firstParagraph);
+    divPost.appendChild(firstParagraph);
+
+    const paraFlex = para[1];
+    console.log(paraFlex);
+    divFlexSmall.appendChild(paraFlex);
+  }
+
+  const img = paresedContent.querySelectorAll("img");
+  for (let i = 0; i < img.length; i++) {
+    const imgForFlex = img[0];
+    //imgForFlex.src = img[0].src;
+    console.log(imgForFlex);
+    divFlexSmall.appendChild(imgForFlex);
+  }
+  divPost.appendChild(divFlexSmall);
+
+  //console.log(para);
 
   blogPostContainer.innerHTML = "";
   blogPostContainer.appendChild(divPost);

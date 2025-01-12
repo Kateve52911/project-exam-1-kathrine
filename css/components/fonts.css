@@ -37,7 +37,8 @@ a,
 }
 
 .h1-homepage,
-.description-line-about {
+.description-line-about,
+.subheading-postPage {
   color: var(--main-colour-dark-r);
 }
 

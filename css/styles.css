@@ -78,6 +78,10 @@ footer {
   padding: 4%;
 } */
 
+.flex-container-small {
+  display: flex;
+}
+
 /* Media Queries */
 /* Mobile */
 @media (max-width: 799px) {
