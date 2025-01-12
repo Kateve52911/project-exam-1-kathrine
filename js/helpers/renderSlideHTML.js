@@ -1,7 +1,11 @@
 import { getPostsDetails } from "../api/apiCall.js";
+import { API_URL } from "../api/constants.js";
 import { parseHTMLContent } from "./parseHTMLContent.js";
 
 const postData = await getPostsDetails();
+
+const blogContainer = document.querySelector(".carouselContainer-index");
+let currentSlide = 0;
 
 export function createCarouselHTML(posts) {
   const carouselContainer = document.createElement("div");
@@ -18,9 +22,9 @@ export function createCarouselHTML(posts) {
     //slide.classList.add(colour);
     slide.style.display = index === 0 ? "block" : "none";
 
-    const postCard = (document.createElement = "a");
+    const postCard = document.createElement("a");
     postCard.className = "post-card";
-    // postCard.href =
+    postCard.href = `postPage.html?id=${post.id}`;
 
     const parsedContent = parseHTMLContent(post.content.rendered);
     const img = parsedContent.querySelectorAll("img");
@@ -35,12 +39,94 @@ export function createCarouselHTML(posts) {
     postImg.className = "post-img";
 
     const postTitle = document.createElement("h2");
+    postTitle.className = "post-title";
+    postTitle.textContent = post.title.rendered;
+
+    postCard.appendChild(postImg);
+    postCard.appendChild(postTitle);
+
+    slide.appendChild(postCard);
+
+    carousel.appendChild(slide);
   });
+
+  const prevBtn = document.createElement("button");
+  prevBtn.textContent = "&larr;";
+  prevBtn.className = "carousel-btn prev";
+
+  const nextBtn = document.createElement("button");
+  nextBtn.textContent = "&rarr;";
+  nextBtn.className = "carousel-btn next";
+
+  const dotsContainer = document.createElement("div");
+  dotsContainer.className = "carousel-dots";
+
+  recentPosts.forEach((_, index) => {
+    const dot = document.createElement("span");
+    dot.className = `dot ${index === 0 ? "active" : ""}`;
+    dot.dataset.slide = index;
+    dotsContainer.appendChild(dot);
+  });
+
+  carouselContainer.appendChild(prevBtn);
+  carouselContainer.appendChild(carousel);
+  carouselContainer.appendChild(nextBtn);
+  carouselContainer.appendChild(dotsContainer);
+
+  return carouselContainer;
 }
 
-console.log("dingus");
+function showSlide(slideIndex) {
+  const slides = document.querySelectorAll(".carousel-slide");
+  const dots = document.querySelectorAll(".dot");
 
-const sliderTtile = document.createElement("h2");
-sliderTtile.textContent = post.title.rendered;
-sliderTtile.classList.add("slider-title");
-slider.appendChild(sliderTtile);
+  if (slideIndex >= slides.length) currentSlide = 0;
+  if (slideIndex < 0) currentSlide = slides.length - 1;
+
+  slides.forEach((slide) => (slide.style.display = "none"));
+  dots.forEach((dot) => dot.classList.remove("active"));
+
+  slides[currentSlide].style.display = "block";
+  dots[currentSlide].classList.add("active");
+}
+
+function initializeCarousel() {
+  const container = document.querySelector(".carousel-container");
+
+  // Next/Prev button handlers
+  container.querySelector(".next").addEventListener("click", () => {
+    currentSlide++;
+    showSlide(currentSlide);
+  });
+
+  container.querySelector(".prev").addEventListener("click", () => {
+    currentSlide--;
+    showSlide(currentSlide);
+  });
+
+  // Dot indicator handlers
+  container.querySelectorAll(".dot").forEach((dot) => {
+    dot.addEventListener("click", () => {
+      currentSlide = parseInt(dot.dataset.slide);
+      showSlide(currentSlide);
+    });
+  });
+
+  // Optional: Auto-play
+  setInterval(() => {
+    currentSlide++;
+    showSlide(currentSlide);
+  }, 5000); // Change slide every 5 seconds
+}
+
+// Initialize everything
+async function init() {
+  const posts = await getPostsDetails(API_URL);
+  if (posts.length > 0) {
+    const carousel = createCarouselHTML(posts);
+    blogContainer.appendChild(carousel);
+    initializeCarousel();
+  }
+}
+
+init();
