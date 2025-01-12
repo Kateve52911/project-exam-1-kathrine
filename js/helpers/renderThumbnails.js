@@ -1,4 +1,4 @@
-import { parseHTMLContent } from "../helpers/parseHTMLContent.js";
+import { parseHTMLContent } from "./parseHTMLContent.js";
 
 const blogContainer = document.querySelector(".container-blog-posts");
 
@@ -19,6 +19,7 @@ export function renderThumbnails(post, colour, btnColour) {
     const firstImg = img[0];
     const thumbImg = document.createElement("img");
     thumbImg.src = firstImg.src;
+    thumbImg.alt = firstImg.alt;
     thumbImg.classList.add("thumb-img");
     thumbElement.appendChild(thumbImg);
   }
@@ -27,6 +28,9 @@ export function renderThumbnails(post, colour, btnColour) {
   thumbBtn.classList.add("thumb-btn");
   thumbBtn.classList.add(btnColour);
   thumbBtn.textContent = "View Post";
+  thumbBtn.addEventListener("click", () => {
+    window.location.href = `postPage.html?id=${post.id}`; // Navigate on click
+  });
   thumbElement.appendChild(thumbBtn);
 
   blogContainer.appendChild(thumbElement);

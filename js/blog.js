@@ -1,4 +1,4 @@
-import { getBlogPostsDetails } from "./api/apiCall.js";
+import { getBlogPostsDetails } from "./api/apiCallPaginated.js";
 import { getColorScheme } from "./helpers/getColourScheme.js";
 import { renderThumbnails } from "./helpers/renderThumbnails.js";
 
@@ -26,10 +26,14 @@ async function loadPosts(page) {
 }
 
 // Create and add the "Load More" button
+const btnDiv = document.createElement("div");
+btnDiv.className = "btnLoadMoreContainer";
+
 const loadMoreBtn = document.createElement("button");
 loadMoreBtn.textContent = "Load More Posts";
 loadMoreBtn.classList.add("load-more-btn");
-blogContainer.insertAdjacentElement("afterend", loadMoreBtn);
+btnDiv.appendChild(loadMoreBtn);
+blogContainer.insertAdjacentElement("afterend", btnDiv);
 
 // Add click event listener to Load More button
 loadMoreBtn.addEventListener("click", async () => {

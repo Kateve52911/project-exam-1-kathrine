@@ -4,6 +4,7 @@
 @import url(./components/form.css);
 @import url(./components/buttons.css);
 @import url(./components/thumbnail.css);
+@import url(./components/carousel.css);
 
 html,
 body {
@@ -55,11 +56,6 @@ footer {
   gap: 100px;
 }
 
-.post-container {
-  background-color: var(--main-colour-dark-r);
-  padding: 4%;
-}
-
 /* blog */
 
 .container-blog-posts {
@@ -75,6 +71,13 @@ footer {
   margin: 5% 44%;
 }
 
+/* Blog Post Page */
+
+/* .post-container {
+  background-color: var(--main-colour-dark-r);
+  padding: 4%;
+} */
+
 /* Media Queries */
 /* Mobile */
 @media (max-width: 799px) {
@@ -85,5 +88,10 @@ footer {
   .mini-container-about {
     flex-direction: column;
     gap: 30px;
+  }
+
+  .container-blog-posts {
+    display: flex;
+    flex-direction: column;
   }
 }

@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin: 5%;
   padding: 5%;
   border-radius: 10px;
@@ -23,4 +23,9 @@
 
 .thumbnail.default {
   background-color: var(--main-colour-dark-r);
+}
+
+/* Media Queries */
+/* Phone */
+@media (max-width: 799px) {
 }

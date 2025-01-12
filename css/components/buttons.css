@@ -55,7 +55,7 @@
   border-color: var(--main-colour-p);
 }
 
-.loadMoreBtn {
+.load-more-btn {
   background-color: var(--main-colour-gb);
   color: var(--main-colour-dark-b);
   padding: 20px 50px;
