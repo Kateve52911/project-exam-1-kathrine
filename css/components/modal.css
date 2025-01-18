@@ -1,0 +1,41 @@
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(2, 81, 89, 0.9);
+  transition: opacity 0.3s ease;
+}
+
+.modal.show {
+  display: block;
+  opacity: 1;
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: min(80vw, 1200px);
+  max-height: 75vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: auto;
+}
+
+.temple-image,
+.flex-container-small img {
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.temple-image:hover,
+.flex-container-small img:hover {
+  opacity: 0.8;
+}

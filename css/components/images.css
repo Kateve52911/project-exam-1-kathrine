@@ -41,6 +41,12 @@
   max-width: 100%; /* Prevents the image from exceeding its container width */
   max-height: 100%; /* Prevents the image from exceeding its container height */
   object-fit: contain;
+  padding: 0%;
+}
+
+.flex-image {
+  width: 175% !important;
+  height: auto !important;
 }
 
 /* Media Queries */

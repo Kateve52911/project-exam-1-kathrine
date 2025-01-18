@@ -1,6 +1,7 @@
 import { getPostsDetails } from "../api/apiCall.js";
 import { API_URL } from "../api/constants.js";
 import { parseHTMLContent } from "./parseHTMLContent.js";
+import { createImageModal } from "./modal.js";
 
 async function initPostPage() {
   try {
@@ -65,14 +66,19 @@ function renderHTMLPost(post) {
     });
   }
 
+  const { openModal } = createImageModal();
+
   const img = paresedContent.querySelectorAll("img");
   for (let i = 0; i < img.length; i++) {
     const imgForFlex = img[0];
+    imgForFlex.className = "flex-image";
+    imgForFlex.addEventListener("click", () => openModal(imgForFlex.src));
     divFlexSmall.appendChild(imgForFlex);
 
     const templeImg = img[1];
     templeImg.className = "temple-image";
     templeImg.classList.add("fifth");
+    templeImg.addEventListener("click", () => openModal(templeImg.src));
     divPost.appendChild(templeImg);
   }
   divPost.appendChild(divFlexSmall);

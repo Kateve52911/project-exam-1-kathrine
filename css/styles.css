@@ -5,6 +5,7 @@
 @import url(./components/buttons.css);
 @import url(./components/thumbnail.css);
 @import url(./components/carousel.css);
+@import url(./components/modal.css);
 
 html,
 body {
@@ -114,6 +115,7 @@ footer {
 
 .flex-container-small {
   display: flex;
+  gap: 10%;
 }
 
 /* Media Queries */
