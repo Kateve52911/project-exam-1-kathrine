@@ -8,13 +8,18 @@ a,
 
 a,
 .h1-homepage,
-.about-text,
 .load-more-btn,
 .thumb-btn.darkRed,
 .thumb-btn.darkBlue,
 .thumb-btn.blue,
 .thumb-btn.default {
   font-size: large;
+}
+
+p,
+.about-text {
+  font-size: larger;
+  line-height: 1.6;
 }
 
 .description-line-homepage,
@@ -26,7 +31,8 @@ a,
 .thumb-btn.darkBlue,
 .thumb-btn.blue,
 .thumb-btn.default,
-.thumb-title {
+.thumb-title,
+p {
   font-family: var(--main-text-font);
 }
 

@@ -30,36 +30,50 @@ function renderHTMLPost(post) {
 
   const divFlexSmall = document.createElement("div");
   divFlexSmall.className = "flex-container-small";
+  divFlexSmall.classList.add("third");
 
   const postTitle = document.createElement("h1");
   postTitle.className = "h1-postPage";
   postTitle.textContent = post.title.rendered;
+  postTitle.classList.add("zero");
   divPost.appendChild(postTitle);
 
   const paresedContent = parseHTMLContent(post.content.rendered);
 
   const subheading = paresedContent.querySelector("h2");
   subheading.className = "subheading-postPage";
+  subheading.classList.add("first");
   divPost.appendChild(subheading);
 
   const para = paresedContent.querySelectorAll("p");
-  for (let i = 0; i < para.length; i++) {
+  if (para.length > 0) {
     //console.log(para[i].innerHTML);
     const firstParagraph = para[0];
-    console.log(firstParagraph);
+    firstParagraph.className = "second";
     divPost.appendChild(firstParagraph);
 
-    const paraFlex = para[1];
-    console.log(paraFlex);
-    divFlexSmall.appendChild(paraFlex);
+    if (para.length > 1) {
+      const paraFlex = para[1];
+      divFlexSmall.appendChild(paraFlex);
+    }
+
+    const remainingPara = Array.from(para).slice(2);
+    remainingPara.className = "fourth";
+    remainingPara.forEach((p) => {
+      p.className = "fourth"; // Assign "second" class only to remaining paragraphs
+      divPost.appendChild(p); // Append these paragraphs to divPost
+    });
   }
 
   const img = paresedContent.querySelectorAll("img");
   for (let i = 0; i < img.length; i++) {
     const imgForFlex = img[0];
-    //imgForFlex.src = img[0].src;
-    console.log(imgForFlex);
     divFlexSmall.appendChild(imgForFlex);
+
+    const templeImg = img[1];
+    templeImg.className = "temple-image";
+    templeImg.classList.add("fifth");
+    divPost.appendChild(templeImg);
   }
   divPost.appendChild(divFlexSmall);
 

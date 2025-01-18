@@ -78,6 +78,40 @@ footer {
   padding: 4%;
 } */
 
+.postPage-container,
+.post-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.zero {
+  order: 0;
+}
+
+.first {
+  order: 1;
+}
+
+.second {
+  order: 2;
+}
+
+.third {
+  order: 3;
+}
+
+.fourth {
+  order: 4;
+}
+
+.fifth {
+  order: 5;
+}
+
+.post-container {
+  margin: 0% 25%;
+}
+
 .flex-container-small {
   display: flex;
 }

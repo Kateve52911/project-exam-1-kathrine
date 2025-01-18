@@ -37,6 +37,12 @@
   max-width: 65%;
 }
 
+.temple-image {
+  max-width: 100%; /* Prevents the image from exceeding its container width */
+  max-height: 100%; /* Prevents the image from exceeding its container height */
+  object-fit: contain;
+}
+
 /* Media Queries */
 /* Phone */
 @media (max-width: 799px) {
