@@ -39,7 +39,7 @@ export function createCarouselHTML(posts) {
     postImg.className = "post-img";
 
     const postTitle = document.createElement("h2");
-    postTitle.className = "post-title";
+    postTitle.className = "post-title-carousel";
     postTitle.textContent = post.title.rendered;
 
     postCard.appendChild(postImg);
@@ -51,11 +51,11 @@ export function createCarouselHTML(posts) {
   });
 
   const prevBtn = document.createElement("button");
-  prevBtn.textContent = "&larr;";
+  prevBtn.textContent = "<";
   prevBtn.className = "carousel-btn prev";
 
   const nextBtn = document.createElement("button");
-  nextBtn.textContent = "&rarr;";
+  nextBtn.textContent = ">";
   nextBtn.className = "carousel-btn next";
 
   const dotsContainer = document.createElement("div");

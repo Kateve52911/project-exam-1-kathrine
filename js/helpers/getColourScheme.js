@@ -1,4 +1,4 @@
-export function getColorScheme(index) {
+export function getColourScheme(index) {
   const schemes = [
     { colour: "pink", btnColour: "darkRed" },
     { colour: "darkBlue", btnColour: "blue" },

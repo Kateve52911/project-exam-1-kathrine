@@ -1,5 +1,5 @@
 import { getBlogPostsDetails } from "./api/apiCallPaginated.js";
-import { getColorScheme } from "./helpers/getColourScheme.js";
+import { getColourScheme } from "./helpers/getColourScheme.js";
 import { renderThumbnails } from "./helpers/renderThumbnails.js";
 
 let currentPage = 1;
@@ -17,7 +17,7 @@ async function loadPosts(page) {
 
     const startIndex = (page - 1) * postsPerPage;
     blogData.forEach((post, index) => {
-      const { colour, btnColour } = getColorScheme(startIndex + index);
+      const { colour, btnColour } = getColourScheme(startIndex + index);
       renderThumbnails(post, colour, btnColour, blogContainer);
     });
   } catch (error) {

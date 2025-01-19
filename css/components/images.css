@@ -38,14 +38,17 @@
 }
 
 .temple-image {
-  max-width: 100%; /* Prevents the image from exceeding its container width */
-  max-height: 100%; /* Prevents the image from exceeding its container height */
-  object-fit: contain;
-  padding: 0%;
+  max-width: 100% !important;
+  height: auto !important;
 }
 
 .flex-image {
-  width: 175% !important;
+  max-width: 35% !important;
+  height: auto !important;
+}
+
+.post-img {
+  max-width: 30% !important;
   height: auto !important;
 }
 
@@ -79,5 +82,10 @@
 
   .logo-footer-image {
     max-width: 250px;
+  }
+
+  .flex-image {
+    max-width: 100% !important;
+    height: auto !important;
   }
 }

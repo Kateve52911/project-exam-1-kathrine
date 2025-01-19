@@ -6,6 +6,7 @@
 @import url(./components/thumbnail.css);
 @import url(./components/carousel.css);
 @import url(./components/modal.css);
+@import url(./components/error.css);
 
 html,
 body {
@@ -110,11 +111,12 @@ footer {
 }
 
 .post-container {
-  margin: 0% 25%;
+  margin: 2% 25%;
 }
 
 .flex-container-small {
   display: flex;
+  flex-direction: row;
   gap: 10%;
 }
 
@@ -133,5 +135,14 @@ footer {
   .container-blog-posts {
     display: flex;
     flex-direction: column;
+  }
+
+  .flex-container-small {
+    flex-direction: column;
+    gap: 10%;
+  }
+
+  .post-container {
+    margin: 0% 15%;
   }
 }
