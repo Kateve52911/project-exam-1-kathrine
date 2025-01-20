@@ -83,6 +83,9 @@ p,
   margin-bottom: 0%;
 }
 
+a.post-card {
+  text-decoration: none;
+}
 /* Media Queries */
 @media (max-width: 799px) {
   a.nav-footer {

@@ -4,13 +4,16 @@
   max-width: 800px;
   margin: 2% auto;
   overflow: hidden;
-  background-color: var(--main-colour-dark-r);
+  justify-content: center;
+  align-items: center;
+  display: flex; /* Added */
+  flex-direction: column; /* Added */
 }
 
 .carousel {
   position: relative;
   width: 100%; /* Control the width of the content */
-  margin: 0 10%; /* Center the carousel within the container */
+  margin: 0; /* Center the carousel within the container */
   padding: 2% 3%;
 }
 
@@ -27,4 +30,6 @@
   align-items: center;
   width: 70%;
   max-width: 800px;
+  padding: 4%;
+  margin: 0 auto;
 }

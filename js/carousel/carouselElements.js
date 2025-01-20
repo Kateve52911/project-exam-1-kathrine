@@ -12,6 +12,7 @@ export function createSlide(
 
   const postCard = createPostCard(
     post,
+    index, // Pass the index here
     CLASSES,
     CAROUSEL_CONFIG,
     parseHTMLContent

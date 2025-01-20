@@ -1,3 +1,5 @@
+import { getColourScheme } from "../helpers/getColourScheme.js";
+
 export function createDOMElement(tag, className, textContent = "") {
   const element = document.createElement(tag);
   if (className) element.className = className;
@@ -23,6 +25,7 @@ export function createPostImage(parsedContent, CLASSES, CAROUSEL_CONFIG) {
 
 export function createPostCard(
   post,
+  index, // Add this parameter
   CLASSES,
   CAROUSEL_CONFIG,
   parseHTMLContent
@@ -30,9 +33,11 @@ export function createPostCard(
   const postCard = createDOMElement("a", CLASSES.postCard);
   postCard.href = `postpage.html?id=${post.id}`;
 
+  const scheme = getColourScheme(index);
+  postCard.classList.add(`bg-${scheme.colour}`);
+
   const parsedContent = parseHTMLContent(post.content.rendered);
   const postImg = createPostImage(parsedContent, CLASSES, CAROUSEL_CONFIG);
-
   const postTitle = createDOMElement(
     "h2",
     CLASSES.postTitle,
