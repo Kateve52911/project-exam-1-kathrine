@@ -60,3 +60,24 @@
   color: var(--main-colour-dark-b);
   padding: 20px 50px;
 }
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  cursor: pointer;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  border-radius: 50%;
+}
+
+.carousel-btn.prev {
+  left: 20px;
+}
+
+.carousel-btn.next {
+  right: 20px;
+}
