@@ -2,7 +2,7 @@
 @import url(./fonts.css);
 
 .btn-form {
-  background-color: var(--main-colour-dark-r);
+  background-color: var(--main-colour-r);
   color: white;
   width: 100px;
   height: 40px;
@@ -12,8 +12,8 @@
 
 .hamburger {
   position: absolute;
-  background-color: var(--main-colour-gb);
-  color: var(--main-colour-dark-b);
+  background-color: var(--main-colour-b);
+  color: var(--main-colour-i);
   border: none;
   cursor: pointer;
 }
@@ -24,7 +24,7 @@
 }
 
 .contact-link {
-  color: var(--main-colour-dark-b);
+  color: var(--main-colour-i);
 }
 
 .thumb-btn.darkRed,
@@ -32,22 +32,22 @@
 .thumb-btn.blue,
 .thumb-btn.default {
   color: white;
-  background-color: var(--main-colour-dark-r);
-  border-color: var(--main-colour-dark-r);
+  background-color: var(--main-colour-r);
+  border-color: var(--main-colour-r);
   border-radius: 10px;
   padding: 10px 40px;
 }
 
 .thumb-btn.darkBlue {
   color: white;
-  background-color: var(--main-colour-dark-b);
-  border-color: var(--main-colour-dark-b);
+  background-color: var(--main-colour-i);
+  border-color: var(--main-colour-i);
 }
 
 .thumb-btn.blue {
-  color: var(--main-colour-dark-b);
-  background-color: var(--main-colour-gb);
-  border-color: var(--main-colour-gb);
+  color: var(--main-colour-i);
+  background-color: var(--main-colour-b);
+  border-color: var(--main-colour-b);
 }
 
 .thumb-btn.default {
@@ -56,8 +56,8 @@
 }
 
 .load-more-btn {
-  background-color: var(--main-colour-gb);
-  color: var(--main-colour-dark-b);
+  background-color: var(--main-colour-b);
+  color: var(--main-colour-i);
   padding: 20px 50px;
 }
 

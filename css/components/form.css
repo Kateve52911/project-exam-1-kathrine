@@ -14,18 +14,18 @@ label {
 
 input {
   background-color: var(--form-background);
-  color: var(--main-colour-dark-r);
+  color: var(--main-colour-r);
   display: block;
   width: 300px;
   height: 30px;
-  border: var(--main-colour-dark-r);
+  border: var(--main-colour-r);
 }
 
 textarea {
   width: 300px;
   height: 200px;
   background-color: var(--form-background);
-  border: var(--main-colour-dark-r);
+  border: var(--main-colour-r);
 }
 
 @media (max-width: 799px) {

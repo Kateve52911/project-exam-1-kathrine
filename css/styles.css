@@ -15,7 +15,7 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #f2bb9b;
+  background-color: var(--background-colour);
 }
 
 header {
@@ -76,7 +76,7 @@ footer {
 /* Blog Post Page */
 
 /* .post-container {
-  background-color: var(--main-colour-dark-r);
+  background-color: var(--main-colour-r);
   padding: 4%;
 } */
 

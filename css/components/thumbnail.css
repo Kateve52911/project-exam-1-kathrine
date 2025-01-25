@@ -16,17 +16,17 @@
 
 .thumbnail.darkBlue,
 .bg-darkBlue {
-  background-color: var(--main-colour-dark-b);
+  background-color: var(--main-colour-i);
 }
 
 .thumbnail.blue,
 .bg-blue {
-  background-color: var(--main-colour-gb);
+  background-color: var(--main-colour-b);
 }
 
 .thumbnail.default,
 .bg-default {
-  background-color: var(--main-colour-dark-r);
+  background-color: var(--main-colour-r);
 }
 
 /* Media Queries */

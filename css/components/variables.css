@@ -1,11 +1,22 @@
 :root {
-  --main-colour-dark-r: #731a3b;
-  --main-colour-dark-b: #025159;
-  --main-colour-dark-b-modal: rgba(2, 81, 89 0.7);
-  --main-colour-p: #f2055c;
-  --main-colour-gb: #04d9c4;
-  --background-colour: #f2bb9b;
+  --main-colour-r: #d95f5f;
+  --main-colour-i: #0e0726;
+  --main-colour-i-modal: rgba(14, 7, 38, 0.7);
+  --main-colour-p: #6e1f34;
+  --main-colour-b: #7283a6;
+  --background-colour: #fbe4e6;
   --main-header-font: "Lucida Grande", Areal, Bodoni;
   --main-text-font: "Bodoni 72", Areal;
   --form-background: #f28488;
 }
+
+/* --main-colour-r: #731a3b;
+--main-colour-i: #025159;
+--main-colour-i-modal: rgba(2, 81, 89 0.7);
+--main-colour-p: #f2055c;
+  --main-colour-p: #a63352;
+--main-colour-b: #04d9c4;
+--background-colour: #f2bb9b;
+--main-header-font: "Lucida Grande", Areal, Bodoni;
+--main-text-font: "Bodoni 72", Areal;
+--form-background: #f28488; */

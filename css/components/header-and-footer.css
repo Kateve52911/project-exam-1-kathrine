@@ -3,16 +3,16 @@
 @import url(buttons.css);
 
 .header-container {
-  background-color: var(--main-colour-gb);
-  border: solid var(--main-colour-dark-b);
+  background-color: var(--main-colour-b);
+  border: solid var(--main-colour-i);
   border-width: 20px 0; /* Top and bottom: 20px, left and right: 0 */
   padding: 2%;
   width: auto;
 }
 
 .footer-container {
-  background-color: var(--main-colour-p);
-  border: solid var(--main-colour-dark-r);
+  background-color: var(--main-colour-r);
+  border: solid var(--main-colour-p);
   border-width: 20px 0; /* Top and bottom: 20px, left and right: 0 */
   padding: 2%;
 }
@@ -34,7 +34,7 @@ li {
 
 a.nav-header,
 a.nav-footer {
-  color: var(--main-colour-dark-b);
+  color: var(--main-colour-i);
   text-decoration: none;
   padding: 5px 20px;
 }
@@ -61,15 +61,15 @@ a.nav-footer {
 }
 
 a.indicator-header {
-  /* background-color: var(--main-colour-dark-b); */
+  /* background-color: var(--main-colour-i); */
   border-radius: 10px;
-  box-shadow: 5px 5px 10px var(--main-colour-dark-b);
+  box-shadow: 5px 5px 10px var(--main-colour-i);
 }
 
 a.indicator-footer {
   /* text-decoration: underline; */
   border-radius: 10px;
-  box-shadow: 5px 5px 10px var(--main-colour-dark-r);
+  box-shadow: 5px 5px 10px var(--main-colour-i);
 }
 
 .nav-text {
@@ -99,7 +99,7 @@ a.indicator-footer {
   left: 0;
   width: 100%;
   height: auto;
-  background-color: var(--main-colour-gb);
+  background-color: var(--main-colour-b);
   z-index: 1000;
   flex-direction: column;
   gap: 20px;
