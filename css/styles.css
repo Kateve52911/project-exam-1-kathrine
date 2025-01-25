@@ -62,7 +62,7 @@ footer {
 
 .container-blog-posts {
   display: grid;
-  grid-template-columns: repeat(2, 25%);
+  grid-template-columns: repeat(3, 25%);
   grid-template-rows: auto;
   margin-bottom: 10%;
   justify-items: center;

@@ -43,6 +43,11 @@ p,
   font-weight: lighter;
 }
 
+a,
+.h1-homepage {
+  font-weight: 100;
+}
+
 .h1-homepage,
 .description-line-about,
 .subheading-postPage {
@@ -69,7 +74,8 @@ p,
 }
 
 .description-line-about {
-  font-size: 46px;
+  font-size: 36px;
+  font-style: italic;
 }
 
 .thumb-title,

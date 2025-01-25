@@ -56,7 +56,7 @@
 /* Phone */
 @media (max-width: 799px) {
   .image-front-page-header {
-    width: 445px;
+    width: auto;
     height: 300px;
   }
 

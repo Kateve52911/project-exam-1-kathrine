@@ -68,6 +68,7 @@ a.indicator-header {
 
 a.indicator-footer {
   /* text-decoration: underline; */
+  border-radius: 10px;
   box-shadow: 5px 5px 10px var(--main-colour-dark-r);
 }
 
