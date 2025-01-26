@@ -15,6 +15,12 @@
   position: relative;
 }
 
+.acropolis-image-day {
+  position: absolute;
+  top: -250px;
+  left: -450px;
+}
+
 .acropolis-image {
   position: absolute;
   top: -150px;
@@ -64,6 +70,12 @@
     position: absolute;
     top: -150px;
     left: -750px;
+  }
+
+  .acropolis-image-day {
+    position: absolute;
+    top: -250px;
+    left: -1050px;
   }
 
   .logo-Image {

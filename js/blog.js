@@ -10,22 +10,25 @@ async function loadPosts(page) {
   try {
     const blogData = await getBlogPostsDetails(page, postsPerPage);
 
-    if (blogData.length === 0) {
-      document.querySelector(".load-more-btn").style.display = "none";
-      return;
-    }
-
     const startIndex = (page - 1) * postsPerPage;
     blogData.forEach((post, index) => {
       const { colour, btnColour } = getColourScheme(startIndex + index);
       renderThumbnails(post, colour, btnColour, blogContainer);
     });
+    if (blogData.length < postsPerPage) {
+      loadMoreBtn.remove();
+      const noMorePosts = document.createElement("p");
+      noMorePosts.textContent = "No more posts";
+      noMorePosts.className = "no-more-posts-message";
+      btnDiv.appendChild(noMorePosts);
+      return;
+    }
   } catch (error) {
+    loadMoreBtn.remove();
     console.error("Error loading posts:", error);
   }
 }
 
-// Create and add the "Load More" button
 const btnDiv = document.createElement("div");
 btnDiv.className = "btnLoadMoreContainer";
 
@@ -35,11 +38,12 @@ loadMoreBtn.classList.add("load-more-btn");
 btnDiv.appendChild(loadMoreBtn);
 blogContainer.insertAdjacentElement("afterend", btnDiv);
 
-// Add click event listener to Load More button
-loadMoreBtn.addEventListener("click", async () => {
+async function handleLoadMore() {
   currentPage++;
   await loadPosts(currentPage);
-});
+}
+
+loadMoreBtn.addEventListener("click", handleLoadMore);
 
 // Initial load
 loadPosts(currentPage);

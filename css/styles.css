@@ -70,10 +70,25 @@ footer {
 }
 
 .btnLoadMoreContainer {
-  margin: 5% 44%;
+  margin: 2% 40%;
 }
 
 /* Blog Post Page */
+
+.no-more-posts-message,
+.error-message {
+  text-align: center;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.no-more-posts-message {
+  color: #666;
+}
+
+.error-message {
+  color: #ff0000;
+}
 
 /* .post-container {
   background-color: var(--main-colour-r);

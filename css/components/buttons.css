@@ -58,7 +58,7 @@
 .load-more-btn {
   background-color: var(--main-colour-b);
   color: var(--main-colour-i);
-  padding: 20px 50px;
+  padding: 10px 80px;
 }
 
 .carousel-btn {
