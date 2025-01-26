@@ -83,3 +83,11 @@
 .carousel-btn.next {
   right: 0;
 }
+
+/* Media Queries */
+
+@media (max-width: 809px) {
+}
+
+@media (min-width: 810px) and (max-width: 1080px) {
+}

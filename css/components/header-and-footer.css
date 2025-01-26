@@ -126,7 +126,7 @@ a.indicator-footer {
 /* Media Queries */
 
 /* Desktop - Always Show Menu Inline */
-@media (min-width: 769px) {
+@media (min-width: 811px) {
   .menu {
     display: flex; /* Always visible in desktop */
     position: static; /* Normal flow positioning */
@@ -137,9 +137,13 @@ a.indicator-footer {
     gap: 20px;
     padding: 0; /* Remove mobile-specific padding */
   }
+
+  .hamburger {
+    display: none;
+  }
 }
 /* Media Query for Mobile View */
-@media (max-width: 799px) {
+@media (max-width: 810px) {
   .hamburger {
     display: block; /* Show hamburger on mobile */
   }
@@ -168,7 +172,4 @@ a.indicator-footer {
   .footer-container {
     width: auto;
   }
-}
-
-@media (max-width: 799px) {
 }
