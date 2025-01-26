@@ -14,7 +14,7 @@ label {
 
 input {
   background-color: var(--form-background);
-  color: var(--main-colour-r);
+  color: black;
   display: block;
   width: 300px;
   height: 30px;
