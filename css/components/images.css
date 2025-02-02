@@ -40,7 +40,10 @@
 }
 
 .thumb-img {
-  max-width: 65%;
+  height: 300px;
+  width: 220px;
+  overflow: hidden;
+  padding: 10%;
 }
 
 .temple-image {

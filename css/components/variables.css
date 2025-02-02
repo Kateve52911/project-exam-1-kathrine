@@ -5,8 +5,8 @@
   --main-colour-p: #6e1f34;
   --main-colour-b: #7283a6;
   --background-colour: #fbe4e6;
-  --main-header-font: "Lucida Grande", Areal, Bodoni;
-  --main-text-font: "Bodoni 72", Areal;
+  --main-header-font: "Bodoni 72 serif", Areal, Bodoni;
+  --main-text-font: "Lucida Grande serif", Areal;
   --form-background: #f28488;
 }
 
