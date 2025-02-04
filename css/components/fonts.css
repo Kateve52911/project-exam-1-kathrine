@@ -16,6 +16,10 @@ a,
   font-size: large;
 }
 
+.thumb-title {
+  font-size: larger;
+}
+
 p,
 .about-text {
   font-size: larger;
@@ -88,6 +92,7 @@ a,
 .thumb-title,
 .post-title-carousel {
   color: white;
+  font-weight: 100;
 }
 
 .post-title-carousel {
