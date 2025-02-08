@@ -1,5 +1,5 @@
 import { getPostDetails } from "../api/postAPI.js";
-import { renderBlogPost } from "./blogPostRender.js";
+import { renderBlogPost } from "../helpers/blogPostRender.js";
 import { displayError } from "../utils/errorHandler.js";
 
 async function initPostPage() {

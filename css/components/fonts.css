@@ -20,6 +20,10 @@ a,
   font-size: larger;
 }
 
+h1 {
+  text-shadow: 0px 0px 10px rgba(110, 31, 52, 0.5);
+}
+
 p,
 .about-text {
   font-size: larger;
