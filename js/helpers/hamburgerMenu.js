@@ -4,15 +4,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeIcon = document.querySelector(".closeIcon");
   const menuIcon = document.querySelector(".menuIcon");
 
-  // Set initial state
-  closeIcon.style.display = "none"; // Hide close icon initially
+  closeIcon.style.display = "none";
 
   hamburger.addEventListener("click", () => {
-    menu.classList.toggle("open"); // Toggles visibility of menu
+    menu.classList.toggle("open");
     const isOpen = menu.classList.contains("open");
 
-    // Toggle icons
-    menuIcon.style.display = isOpen ? "none" : "block"; // Show menu icon if menu is closed
-    closeIcon.style.display = isOpen ? "block" : "none"; // Show close icon if menu is open
+    menuIcon.style.display = isOpen ? "none" : "block";
+    closeIcon.style.display = isOpen ? "block" : "none";
   });
 });

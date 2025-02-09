@@ -25,7 +25,7 @@ export function renderThumbnails(post, colour, btnColour, container) {
   thumbBtn.classList.add("thumb-btn", btnColour);
   thumbBtn.textContent = "View Post";
   thumbBtn.addEventListener("click", () => {
-    window.location.href = `postPage.html?id=${post.id}`; // Navigate on click
+    window.location.href = `postPage.html?id=${post.id}`;
   });
   thumbElement.appendChild(thumbBtn);
 

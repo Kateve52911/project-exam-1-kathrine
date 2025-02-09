@@ -10,7 +10,6 @@ async function initializePreview() {
       const previewElement = createPostPreviewFrontPage(post);
 
       if (!previewElement) {
-        // Check if previewElement is valid
         console.error(
           "Error: createPostPreviewFrontPage returned null or undefined."
         );

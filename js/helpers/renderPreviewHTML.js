@@ -11,7 +11,7 @@ export function createPostPreviewFrontPage(post) {
   postPreview.appendChild(postTitle);
 
   const postExcerpt = document.createElement("p");
-  postExcerpt.innerHTML = post.excerpt.rendered; // Use innerHTML to keep formatting
+  postExcerpt.innerHTML = post.excerpt.rendered;
   postExcerpt.classList.add("post-excerpt");
   postPreview.appendChild(postExcerpt);
 
@@ -19,11 +19,11 @@ export function createPostPreviewFrontPage(post) {
   previewButton.textContent = "Read more";
   previewButton.classList.add("preview-button");
   previewButton.addEventListener("click", () => {
-    window.location.href = `postPage.html?id=${post.id}`; // Navigate on click
+    window.location.href = `postPage.html?id=${post.id}`;
   });
   postPreview.appendChild(previewButton);
 
   previewContainer.appendChild(postPreview);
 
-  return previewContainer; // ✅ Ensure this returns a DOM element
+  return previewContainer;
 }

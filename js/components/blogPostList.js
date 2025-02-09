@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
   async function loadPosts(page) {
     try {
       const blogData = await getBlogPostsDetails(page, postsPerPage);
-      console.log("Received blog data:", blogData);
 
       const startIndex = (page - 1) * postsPerPage;
       blogData.forEach((post, index) => {

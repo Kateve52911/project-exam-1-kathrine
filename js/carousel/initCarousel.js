@@ -1,5 +1,5 @@
-import { BlogCarousel } from "./blogCarousel.js"; // Import the class
-import { SELECTORS } from "./config.js"; // Import selectors
+import { BlogCarousel } from "./blogCarousel.js";
+import { SELECTORS } from "./config.js";
 
 window.addEventListener("load", async () => {
   try {
