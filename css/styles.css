@@ -73,12 +73,16 @@ footer {
   margin: 2% 40%;
 }
 
-/* Blog Post Page */
+.search-container {
+  margin: 2% 39%;
+}
 
-/* .post-container {
-  background-color: var(--main-colour-r);
-  padding: 4%;
-} */
+#search-bar {
+  margin: 2%;
+  padding: 20px 45px;
+}
+
+/* Blog Post Page */
 
 .postPage-container,
 .post-container {

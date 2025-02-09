@@ -93,6 +93,13 @@ a,
   margin: 10px 0;
 }
 
+.no-more-posts-message {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 10px;
+  text-align: center;
+}
+
 .thumb-title,
 .post-title-carousel {
   color: white;

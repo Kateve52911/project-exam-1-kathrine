@@ -1,41 +1,48 @@
 import { getBlogPostsDetails } from "../api/apiCallPaginated.js";
 import { getColourScheme } from "../helpers/getColourScheme.js";
+import { showNoMorePosts } from "../helpers/noMorePosts.js";
 import { renderThumbnails } from "../helpers/renderThumbnails.js";
+import { initializeSearch } from "../search/search.js";
 import { createLoadMoreButton } from "./loadMoreButton.js";
 
-const blogContainer = document.querySelector(".container-blog-posts");
-let currentPage = 1;
-const postsPerPage = 10;
+document.addEventListener("DOMContentLoaded", () => {
+  const blogContainer = document.querySelector(".container-blog-posts");
+  let currentPage = 1;
+  const postsPerPage = 10;
 
-async function loadPosts(page) {
-  try {
-    const blogData = await getBlogPostsDetails(page, postsPerPage);
+  let btnDiv;
+  let loadMoreBtn;
 
-    if (!blogData || blogData.length === 0) {
-      loadMoreBtn.remove();
-      const noMorePosts = document.createElement("p");
-      noMorePosts.textContent = "No more posts";
-      noMorePosts.className = "no-more-post-message";
-      btnDiv.appendChild(noMorePosts);
-      return;
+  initializeSearch();
+
+  async function loadPosts(page) {
+    try {
+      const blogData = await getBlogPostsDetails(page, postsPerPage);
+      console.log("Received blog data:", blogData);
+
+      const startIndex = (page - 1) * postsPerPage;
+      blogData.forEach((post, index) => {
+        const { colour, btnColour } = getColourScheme(startIndex + index);
+        renderThumbnails(post, colour, btnColour, blogContainer);
+      });
+
+      if (!blogData || blogData.length < postsPerPage) {
+        showNoMorePosts(loadMoreBtn, btnDiv);
+        return;
+      }
+    } catch (error) {
+      console.error("Error loading posts", error);
+      showNoMorePosts(loadMoreBtn, btnDiv);
     }
-
-    const startIndex = (page - 1) * postsPerPage;
-    blogData.forEach((post, index) => {
-      const { colour, btnColour } = getColourScheme(startIndex + index);
-      renderThumbnails(post, colour, btnColour, blogContainer);
-    });
-  } catch (error) {
-    console.error("Error loading posts", error);
   }
-}
 
-async function handleLoadMore() {
-  currentPage++;
-  await loadPosts(currentPage);
-}
+  async function handleLoadMore() {
+    currentPage++;
+    await loadPosts(currentPage);
+  }
 
-const { btnDiv, loadMoreBtn } = createLoadMoreButton(handleLoadMore);
-blogContainer.insertAdjacentElement("afterend", btnDiv);
+  ({ btnDiv, loadMoreBtn } = createLoadMoreButton(handleLoadMore));
+  blogContainer.insertAdjacentElement("afterend", btnDiv);
 
-loadPosts(currentPage);
+  loadPosts(currentPage);
+});
