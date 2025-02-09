@@ -81,7 +81,8 @@ a,
 }
 
 .menuIcon {
-  font-size: 32px;
+  font-size: 36px;
+  margin-top: 0%;
 }
 
 .about-text {
@@ -140,5 +141,9 @@ a.post-card {
 
   p {
     font-size: large;
+  }
+
+  .h2-index {
+    font-size: 36px;
   }
 }

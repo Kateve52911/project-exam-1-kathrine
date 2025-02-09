@@ -31,6 +31,7 @@
   border-radius: 40%;
   height: 600px;
   width: 300px;
+  margin: 20%;
 }
 
 .vase-image-about {
@@ -92,10 +93,6 @@
   .logo-Image {
     max-width: 200px;
     margin: 8% 20%;
-  }
-
-  .img-contact-page {
-    padding: 12%;
   }
 
   .vase-image-about {

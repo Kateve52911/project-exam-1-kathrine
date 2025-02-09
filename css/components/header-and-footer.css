@@ -145,15 +145,19 @@ a.indicator-footer {
 /* Media Query for Mobile View */
 @media (max-width: 810px) {
   .hamburger {
-    display: block; /* Show hamburger on mobile */
+    display: block;
   }
 
   .menu {
-    display: none; /* Hide menu by default */
+    display: none;
   }
 
   .menu.open {
-    display: flex; /* Show menu when toggled open */
+    display: flex;
+  }
+
+  .closeIcon {
+    margin-left: 300px;
   }
 
   .flex-footer {

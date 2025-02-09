@@ -21,7 +21,7 @@
 
 .closeIcon {
   position: fixed;
-  margin-left: 350px;
+  margin-left: 300px;
 }
 
 .contact-link {
@@ -89,6 +89,9 @@
 /* Media Queries */
 
 @media (max-width: 809px) {
+  .carousel-btn {
+    padding: 10px;
+  }
 }
 
 @media (min-width: 810px) and (max-width: 1080px) {
