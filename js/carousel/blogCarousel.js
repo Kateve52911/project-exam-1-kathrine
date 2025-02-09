@@ -1,13 +1,11 @@
 import { getBlogPostsDetails } from "../api/apiCallPaginated.js";
 import { parseHTMLContent } from "../helpers/parseHTMLContent.js";
 import { displayError } from "../utils/errorHandler.js";
-import { API_URL } from "../api/constants.js";
 import { getColourScheme } from "../helpers/getColourScheme.js";
 import { CAROUSEL_CONFIG, SELECTORS, CLASSES } from "./config.js";
 
 export class BlogCarousel {
   constructor(containerSelector, config = {}) {
-    // Configurations
     this.config = {
       ...CAROUSEL_CONFIG,
       ...config,
@@ -15,7 +13,6 @@ export class BlogCarousel {
     this.selectors = SELECTORS;
     this.classes = CLASSES;
 
-    // State
     this.currentSlide = 0;
     this.autoPlayInterval = null;
     this.container = document.querySelector(containerSelector);
@@ -38,9 +35,6 @@ export class BlogCarousel {
       }
 
       this.container.appendChild(carousel);
-      console.log("dingus");
-      console.log(this.carousel);
-      console.log(this.container);
       this.setupEventListeners(carousel);
       this.startAutoPlay();
     } catch (error) {

@@ -2,7 +2,8 @@
 
 a,
 .h1-homepage,
-.about-text {
+.about-text,
+.h2-index {
   font-family: var(--main-header-font);
 }
 
@@ -42,8 +43,14 @@ p,
 .thumb-title,
 p,
 .post-title-carousel,
-.error-message {
+.error-message,
+.post-excerpt {
   font-family: var(--main-text-font);
+}
+
+.post-excerpt {
+  font-size: medium;
+  text-align: left;
 }
 
 .description-line-homepage,
@@ -114,6 +121,11 @@ a,
 
 a.post-card {
   text-decoration: none;
+}
+
+.h2-index {
+  padding: 2% 0%;
+  font-size: 46px;
 }
 /* Media Queries */
 @media (max-width: 799px) {

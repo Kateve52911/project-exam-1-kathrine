@@ -1,7 +1,8 @@
 @import url(./variables.css);
 @import url(./fonts.css);
 
-.btn-form {
+.btn-form,
+.preview-button {
   background-color: var(--main-colour-r);
   color: white;
   width: 100px;
