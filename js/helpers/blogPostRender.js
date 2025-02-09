@@ -7,6 +7,8 @@ export function renderBlogPost(post) {
 
   blogPostContainer.innerHTML = "";
   blogPostContainer.appendChild(postContent);
+
+  document.title = `Godly Whispers | ${post.title.rendered}`;
 }
 
 function createPostContent(post) {
