@@ -1,67 +1,54 @@
-## Project Exam 1
 
-## Goal
+![image]
 
-To put into practice the skills learned over your first year of studies.
+I set out to create a webpage using HTML, CSS and Vanilla JS whre the content of the website came from a WP REST API that I managed. 
 
-## Brief
-You have been tasked with creating a blog site. You can choose the design and topics covered on the blog, but it should have at least the following pages:
--	Home page
--	About page
--	List of blog posts
--	Blog post specific pages
--	Contact page.
+## Description
+This is a project I created as a student at Noroff as a exam project. I got to choose the theme for the website but it had to use WP REST API and add content dynamically. It is a website that is built and designed to provide an engaging user experience. I wanted to create an inviting blog that gave the user a feeling of being in Ancient Greece while reading about the Greek Gods. 
 
-### Home Page
-The home page should have a ‘Latest Posts’ section which uses a carousel (slider) for users to click to view more posts. For example, by default the user can see four posts, then they can click an arrow on the right to view the next four posts, and click it again to view the next four posts. The user can also click back to view results they had previously seen. This must be implemented for desktop at least, but if you want a simpler layout for mobile, you can change it from being in a carousel.
+This is to showcase skill in frond-end development. Such as:
+- Implemented dynamic content loading to fetch and display daily posts without needing a full page refresh.
+- Used the DOM Manipulation API to create interactive features, such as a submission form.
+- Added event listeners for smooth navigation and user interactions, ensuring a seamless experience.
+- Applied principles of user-centered design to ensure intuitive navigation and an engaging user experience.
+- Integrated dynamic content to provide users with fresh and interesting reading materials.
+- Leveraged Netlify for seamless deployment, continuous integration, and hosting, ensuring high performance and reliability.
 
-### Blog Page
+## Built With
 
-The blog posts page should show the first 10 blogs, and the user should click to view more results which then show underneath the first 10 blogs.
+On this project I have used HTML, CSS and Vanilla Javascript. 
 
-### Blog Specific Page
+## Getting Started
 
-The content of the blog specific page should be dynamically built using a query string parameter based on whatever link the user clicked. The title of the blog specific page should change based on the blog that has been clicked on e.g. “My Blog | An Article I Wrote”.
+### Installing
+In order to run the websites locally, one can do as follows:
 
-If images on the blog post page are clicked, a modal should appear giving the user a bigger view of that image. Clicking outside the image should hide the modal.
+1. Clone the repo, this can be done for example, with the git command line tool (if installed):
 
-### Contact page
+```bash
+gh repo clone Kateve52911/project-exam-1-kathrine
+```
 
-Create a contact us page, there should be 4 textboxes on this page.
--	Name (Should be more than 5 characters long)
--	Email address (Must be a valid email address)
--	Subject (Should be more than 15 characters long)
--	Message content (Should be more than 25 characters long)
+2. Install Live Server in VS Code (or equivalent if using another IDE) and then it can be run from within.
 
-Please use JavaScript for validation, show error messages if the values in the textboxes do not meet the requirements.
 
-### WordPress
+### Running
 
-The content for your website will be stored on a WordPress installation used as a Headless CMS. It’s important to note that we are only using WordPress to provide an API and add content for the blog. You should not submit a link to a WordPress site, but build your website using HTML, CSS and JavaScript and making a call to the WordPress REST API to fetch the data. 
+To run the app, open VS Code (or equivalent), and then right click on the ´index.html´ file and start with Live Server from the menu.
 
-The project has two aspects:
--	API from your WordPress installation
--	Your website built with HTML, CSS and JavaScript
 
-You will need to add at least 12 blogs for your website. You can use lorem ipsum for paragraphs if you need, but headings, images etc. should all make sense.
+## Contributing
 
-Note that this is an exam, and therefore tutor support will be limited as per the study plan.
+In order to contribute, create a PR in this repo. Add @Kateve52911 as a reviewer. 
 
-## Level 1 Process
+## Contact
 
-1.	Decide on the theme for the blog you’re going to make
-2.	Create a prototype of the website
-3.	Install WordPress on your web host and add the blogs on the admin panel. 
-4.	Use the GitHub repo created by GitHub Classroom for your files and deploy to Netlify
-5.	Build your website using HTML, CSS and JavaScript making a call to the WordPress REST API to fetch your data.
-6.	Install Hotjar on your website.
-7.	Ask users to test your website, and adjust based on their feedback and any insights from Hotjar.
-8.	Write a report documenting your project (template provided in this repository).
-9.	Submit your report as a PDF and a link to both your Netlify deployment and your GitHub repo.
- 
-## Level 2 Process (optional)
+[My portfolio website](kathrinesportfolio.netlify.app)
 
-1.	You can try adding a sort, filter, or search to the blog posts page allowing users to find the blog post more easily that they’re looking for. 
-2.	Post the data from the contact form to WordPress so you have the details saved.
-3.	Allow users to submit comments on a blog post, and post this data to WordPress
+[My LinkedIn page](www.linkedin.com/in/kathrine-mellem-evensen-6855b612b)
 
+
+
+## Acknowledgments
+
+Many thanks to my very patient partner who has answered all my questions throughout the build of this website. 
